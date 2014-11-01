@@ -1,11 +1,11 @@
-package shaoklypal.technomage;
+package shaoklypal.technomage.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-public class BlockTungsten extends Block {
+public class TechMBlockTungsten extends Block {
 
-	public BlockTungsten(Material material) {
+	public TechMBlockTungsten(Material material) {
 		super(material);
 		this.setHardness(3.0F);
 		this.setHarvestLevel("pickaxe", 2);

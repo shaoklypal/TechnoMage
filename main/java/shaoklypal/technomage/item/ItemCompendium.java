@@ -1,4 +1,4 @@
-package shaoklypal.technomage;
+package shaoklypal.technomage.item;
 
 import net.minecraft.item.Item;
 

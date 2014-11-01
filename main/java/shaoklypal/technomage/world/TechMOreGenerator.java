@@ -1,7 +1,8 @@
-package shaoklypal.technomage;
+package shaoklypal.technomage.world;
 
 import java.util.Random;
 
+import shaoklypal.technomage.TechnoMage;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
@@ -10,7 +11,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import cpw.mods.fml.common.IWorldGenerator;
 
-public class TungstenGeneration implements IWorldGenerator {
+public class TechMOreGenerator implements IWorldGenerator {
 
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world,

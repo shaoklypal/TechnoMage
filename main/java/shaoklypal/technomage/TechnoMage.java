@@ -11,13 +11,18 @@ import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
+import shaoklypal.technomage.block.TechMBlockTungsten;
+import shaoklypal.technomage.block.TechMBlockCrops;
+import shaoklypal.technomage.item.ItemCompendium;
 import shaoklypal.technomage.item.ItemTrist;
+import shaoklypal.technomage.item.ItemTungsten;
 import shaoklypal.technomage.item.ItemTungstenArmor;
 import shaoklypal.technomage.item.ItemTungstenAxe;
 import shaoklypal.technomage.item.ItemTungstenHoe;
 import shaoklypal.technomage.item.ItemTungstenPickaxe;
 import shaoklypal.technomage.item.ItemTungstenSpade;
 import shaoklypal.technomage.item.ItemTungstenSword;
+import shaoklypal.technomage.world.TechMOreGenerator;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -62,8 +67,8 @@ public class TechnoMage {
 		//Config handling
 		
 		//blocks
-		blockTungsten = new BlockTungsten(Material.rock).setBlockName("BlockTungsten").setBlockTextureName("techm:blocktungsten").setCreativeTab(tabTechnoMage);
-		blockTrist = new TechMCrop().setBlockName("blockTrist").setBlockTextureName("techm:trist");
+		blockTungsten = new TechMBlockTungsten(Material.rock).setBlockName("BlockTungsten").setBlockTextureName("techm:blocktungsten").setCreativeTab(tabTechnoMage);
+		blockTrist = new TechMBlockCrops().setBlockName("blockTrist").setBlockTextureName("techm:trist");
 		
 		//crops
 		cropTristSeeds = new ItemSeeds(blockTrist, Blocks.farmland).setUnlocalizedName("TristSeeds").setTextureName("techm:tristseeds").setCreativeTab(tabTechnoMage);
@@ -110,7 +115,7 @@ public class TechnoMage {
 		
 		GameRegistry.addSmelting(blockTungsten, new ItemStack(itemTungsten), 1.0F);
 		
-		GameRegistry.registerWorldGenerator(new TungstenGeneration(), 0);
+		GameRegistry.registerWorldGenerator(new TechMOreGenerator(), 0);
 	}
 	
 	@EventHandler

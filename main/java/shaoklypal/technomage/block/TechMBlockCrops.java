@@ -1,7 +1,8 @@
-package shaoklypal.technomage;
+package shaoklypal.technomage.block;
 
 import java.util.Random;
 
+import shaoklypal.technomage.TechnoMage;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
@@ -9,7 +10,7 @@ import net.minecraft.util.IIcon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class TechMCrop extends BlockCrops {
+public class TechMBlockCrops extends BlockCrops {
 
 	@SideOnly(Side.CLIENT)
 	private IIcon[] iconArray;
