@@ -2,11 +2,11 @@ package shaoklypal.technomage.block;
 
 import java.util.Random;
 
-import shaoklypal.technomage.TechnoMage;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
+import shaoklypal.technomage.item.TechMItem;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -39,10 +39,10 @@ public class TechMBlockCrops extends BlockCrops {
 	}
 	
 	protected Item func_149866_i(){
-		return TechnoMage.cropTristSeeds;
+		return TechMItem.cropTristSeeds;
 	}
 	
 	protected Item func_149865_P(){
-		return TechnoMage.itemTrist;
+		return TechMItem.itemTrist;
 	}
 }

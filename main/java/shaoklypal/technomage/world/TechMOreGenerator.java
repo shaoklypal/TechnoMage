@@ -2,13 +2,13 @@ package shaoklypal.technomage.world;
 
 import java.util.Random;
 
-import shaoklypal.technomage.TechnoMage;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 //import net.minecraft.world.gen.feature.WorldGenFlowers;
 import net.minecraft.world.gen.feature.WorldGenMinable;
+import shaoklypal.technomage.block.TechMBlock;
 import cpw.mods.fml.common.IWorldGenerator;
 
 public class TechMOreGenerator implements IWorldGenerator {
@@ -35,7 +35,7 @@ public class TechMOreGenerator implements IWorldGenerator {
 	}
 	
 	public void generateOverworld(World world, Random rand, int x, int z){
-		generateOre(TechnoMage.blockTungsten, world, rand, x, z, 2, 10, 6, 0, 16, Blocks.stone );
+		generateOre(TechMBlock.blockTungsten, world, rand, x, z, 2, 10, 6, 0, 16, Blocks.stone );
 		//generateFlower(TechnoMage.blockTungsten,world, rand, x, z, 32, 50, 80);
 	}
 	
