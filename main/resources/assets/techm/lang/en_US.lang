@@ -1,0 +1,16 @@
+item.ItemCompendium.name=TechnoMage Compendium
+item.ItemTungsten.name=Tungsten Ingot
+item.ItemTungstenPickaxe.name=Tungsten Pickaxe
+item.ItemTungstenAxe.name=Tungsten Axe
+item.ItemTungstenSpade.name=Tungsten Spade
+item.ItemTungstenHoe.name=Tungsten Hoe
+item.ItemTungstenSword.name=Tungsten Sword
+itemGroup.tabTechnoMage=TechnoMage
+tile.BlockTungsten.name=Tungsten Ore
+item.ItemTungstenHelmet.name=Tungsten Helmet
+item.ItemTungstenChestplate.name=Tungsten Chestplate
+item.ItemTungstenLeggings.name=Tungsten Leggings
+item.ItemTungstenBoots.name=Tungsten Boots
+tile.BlockTrist.name=Trist Crop
+item.TristSeeds.name=Trist Seeds
+item.ItemTrist.name=Trist
