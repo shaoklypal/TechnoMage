@@ -17,6 +17,7 @@ public class TechMItem {
 
 	public static Item itemCompendium;
 	public static Item itemTungsten;
+	public static Item itemTungstenAlloy;
 	public static Item tungstenPickaxe;
 	public static Item tungstenAxe;
 	public static Item tungstenSpade;
@@ -39,6 +40,7 @@ public class TechMItem {
 		//items
 		itemCompendium = new ItemCompendium().setUnlocalizedName("ItemCompendium").setTextureName("techm:itemcompendium").setCreativeTab(TechnoMage.tabTechnoMage);
 		itemTungsten = new ItemTungsten().setUnlocalizedName("ItemTungsten").setTextureName("techm:itemtungsteningot").setCreativeTab(TechnoMage.tabTechnoMage);
+		itemTungstenAlloy = new ItemTungsten().setUnlocalizedName("ItemTungstenAlloy").setTextureName("techm:itemtungstenalloyingot").setCreativeTab(TechnoMage.tabTechnoMage);
 		tungstenPickaxe = new ItemTungstenPickaxe(TechMMaterial.tungstenToolMaterial).setUnlocalizedName("ItemTungstenPickaxe").setTextureName("techm:itemtungstenpickaxe").setCreativeTab(TechnoMage.tabTechnoMage);
 		tungstenAxe = new ItemTungstenAxe(TechMMaterial.tungstenToolMaterial).setUnlocalizedName("ItemTungstenAxe").setTextureName("techm:itemtungstenaxe").setCreativeTab(TechnoMage.tabTechnoMage);
 		tungstenSpade = new ItemTungstenSpade(TechMMaterial.tungstenToolMaterial).setUnlocalizedName("ItemTungstenSpade").setTextureName("techm:itemtungstenspade").setCreativeTab(TechnoMage.tabTechnoMage);
@@ -64,6 +66,7 @@ public class TechMItem {
 		//items
 		GameRegistry.registerItem(itemCompendium, itemCompendium.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(itemTungsten, itemTungsten.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(itemTungstenAlloy, itemTungstenAlloy.getUnlocalizedName().substring(5));
 		//tools
 		GameRegistry.registerItem(tungstenPickaxe, tungstenPickaxe.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(tungstenAxe, tungstenAxe.getUnlocalizedName().substring(5));

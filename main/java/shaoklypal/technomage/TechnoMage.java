@@ -53,6 +53,7 @@ public class TechnoMage {
 		GameRegistry.addRecipe(new ItemStack(TechMItem.tungstenChestplate), new Object[]{"T T","TTT", "TTT", 'T', TechMItem.itemTungsten});
 		GameRegistry.addRecipe(new ItemStack(TechMItem.tungstenLeggings), new Object[]{"TTT","T T", "T T", 'T', TechMItem.itemTungsten});
 		GameRegistry.addRecipe(new ItemStack(TechMItem.tungstenBoots), new Object[]{"   ","T T", "T T", 'T', TechMItem.itemTungsten});
+		GameRegistry.addRecipe(new ItemStack(TechMItem.itemTungstenAlloy,6), new Object[]{"TTT","RRR","TTT",'T', TechMItem.itemTungsten, 'R', Items.redstone});
 	}
 	
 	@EventHandler
