@@ -29,6 +29,11 @@ public class TechMItem {
 	public static Item tungstenChestplate;
 	public static Item tungstenLeggings;
 	public static Item tungstenBoots;
+	public static Item itemArmorFrameSegment;
+	public static Item itemArmorFrameHelmet;
+	public static Item itemArmorFrameChest;
+	public static Item itemArmorFrameLegs;
+	public static Item itemArmorFrameBoots;
 
 	/**
 	 * Init items
@@ -50,11 +55,16 @@ public class TechMItem {
 		tungstenSword = new ItemTungstenSword(TechMMaterial.tungstenToolMaterial).setUnlocalizedName("ItemTungstenSword").setTextureName("techm:itemtungstensword").setCreativeTab(TechnoMage.tabTechnoMage);
 
 
-		tungstenHelmet = new ItemTungstenArmor(TechMMaterial.tungstenArmorMaterial, 0, 0).setUnlocalizedName("ItemTungstenHelmet").setTextureName("techm:itemtungstenhelm").setCreativeTab(TechnoMage.tabTechnoMage);;
-		tungstenChestplate = new ItemTungstenArmor(TechMMaterial.tungstenArmorMaterial, 0, 1).setUnlocalizedName("ItemTungstenChestplate").setTextureName("techm:itemtungstenchest").setCreativeTab(TechnoMage.tabTechnoMage);;
-		tungstenLeggings = new ItemTungstenArmor(TechMMaterial.tungstenArmorMaterial, 0, 2).setUnlocalizedName("ItemTungstenLeggings").setTextureName("techm:itemtungstenlegs").setCreativeTab(TechnoMage.tabTechnoMage);;
-		tungstenBoots = new ItemTungstenArmor(TechMMaterial.tungstenArmorMaterial, 0, 3).setUnlocalizedName("ItemTungstenBoots").setTextureName("techm:itemtungstenboots").setCreativeTab(TechnoMage.tabTechnoMage);;
-
+		tungstenHelmet = new ItemTungstenArmor(TechMMaterial.tungstenArmorMaterial, 0, 0).setUnlocalizedName("ItemTungstenHelmet").setTextureName("techm:itemtungstenhelm").setCreativeTab(TechnoMage.tabTechnoMage);
+		tungstenChestplate = new ItemTungstenArmor(TechMMaterial.tungstenArmorMaterial, 0, 1).setUnlocalizedName("ItemTungstenChestplate").setTextureName("techm:itemtungstenchest").setCreativeTab(TechnoMage.tabTechnoMage);
+		tungstenLeggings = new ItemTungstenArmor(TechMMaterial.tungstenArmorMaterial, 0, 2).setUnlocalizedName("ItemTungstenLeggings").setTextureName("techm:itemtungstenlegs").setCreativeTab(TechnoMage.tabTechnoMage);
+		tungstenBoots = new ItemTungstenArmor(TechMMaterial.tungstenArmorMaterial, 0, 3).setUnlocalizedName("ItemTungstenBoots").setTextureName("techm:itemtungstenboots").setCreativeTab(TechnoMage.tabTechnoMage);
+		
+		itemArmorFrameSegment = new ItemArmorFrameSegment().setUnlocalizedName("ItemArmorFrameSegment").setTextureName("techm:itemarmorframesegment").setCreativeTab(TechnoMage.tabTechnoMage);
+		itemArmorFrameHelmet = new ItemArmorFrameHelmet().setUnlocalizedName("ItemArmorFrameHelmet").setTextureName("techm:itemarmorframehelmet").setCreativeTab(TechnoMage.tabTechnoMage);
+		itemArmorFrameChest = new ItemArmorFrameChest().setUnlocalizedName("ItemArmorFrameChest").setTextureName("techm:itemarmorframechest").setCreativeTab(TechnoMage.tabTechnoMage);
+		itemArmorFrameLegs = new ItemArmorFrameLegs().setUnlocalizedName("ItemArmorFrameLegs").setTextureName("techm:itemarmorframelegs").setCreativeTab(TechnoMage.tabTechnoMage);
+		itemArmorFrameBoots = new ItemArmorFrameBoots().setUnlocalizedName("ItemArmorFrameBoots").setTextureName("techm:itemarmorframeboots").setCreativeTab(TechnoMage.tabTechnoMage);
 
 		//register blocks
 		registerItem();
@@ -69,6 +79,7 @@ public class TechMItem {
 		GameRegistry.registerItem(itemCompendium, itemCompendium.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(itemTungsten, itemTungsten.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(itemTungstenAlloy, itemTungstenAlloy.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(itemArmorFrameSegment, itemArmorFrameSegment.getUnlocalizedName().substring(5));
 		//tools
 		GameRegistry.registerItem(tungstenPickaxe, tungstenPickaxe.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(tungstenAxe, tungstenAxe.getUnlocalizedName().substring(5));
@@ -80,6 +91,10 @@ public class TechMItem {
 		GameRegistry.registerItem(tungstenChestplate, tungstenChestplate.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(tungstenLeggings, tungstenLeggings.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(tungstenBoots, tungstenBoots.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(itemArmorFrameHelmet, itemArmorFrameHelmet.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(itemArmorFrameChest, itemArmorFrameChest.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(itemArmorFrameLegs, itemArmorFrameLegs.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(itemArmorFrameBoots, itemArmorFrameBoots.getUnlocalizedName().substring(5));
 		//crops
 		GameRegistry.registerItem(cropTristSeeds, cropTristSeeds.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(itemTrist, itemTrist.getUnlocalizedName().substring(5));	

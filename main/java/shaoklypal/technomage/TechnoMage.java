@@ -55,6 +55,11 @@ public class TechnoMage {
 		GameRegistry.addRecipe(new ItemStack(TechMItem.tungstenBoots), new Object[]{"   ","T T", "T T", 'T', TechMItem.itemTungsten});
 		GameRegistry.addRecipe(new ItemStack(TechMItem.itemTungstenAlloy,6), new Object[]{"TTT","RRR","TTT",'T', TechMItem.itemTungsten, 'R', Items.redstone});
 		GameRegistry.addRecipe(new ItemStack(TechMItem.itemTristMesh), new Object[]{"TTT","T T", "TTT",'T',TechMItem.itemTrist});
+		GameRegistry.addRecipe(new ItemStack(TechMItem.itemArmorFrameSegment,2), new Object[]{"AMA","M M","AMA",'A',TechMItem.itemTungstenAlloy,'M',TechMItem.itemTristMesh});
+		GameRegistry.addRecipe(new ItemStack(TechMItem.itemArmorFrameHelmet), new Object[]{"SSS","S S","   ",'S',TechMItem.itemArmorFrameSegment});
+		GameRegistry.addRecipe(new ItemStack(TechMItem.itemArmorFrameChest), new Object[]{"S S","SSS","SSS",'S',TechMItem.itemArmorFrameSegment});
+		GameRegistry.addRecipe(new ItemStack(TechMItem.itemArmorFrameLegs), new Object[]{"SSS","S S","S S",'S',TechMItem.itemArmorFrameSegment});
+		GameRegistry.addRecipe(new ItemStack(TechMItem.itemArmorFrameBoots), new Object[]{"   ","S S","S S",'S',TechMItem.itemArmorFrameSegment});
 	}
 	
 	@EventHandler
