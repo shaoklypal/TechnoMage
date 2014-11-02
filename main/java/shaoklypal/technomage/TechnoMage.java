@@ -14,7 +14,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = "techm", name = "TechnoMage", version = "0.0.4.1")
+@Mod(modid = "techm", name = "TechnoMage", version = "0.0.6.0")
 public class TechnoMage {
 	
 	@EventHandler
@@ -60,6 +60,12 @@ public class TechnoMage {
 		GameRegistry.addRecipe(new ItemStack(TechMItem.itemArmorFrameChest), new Object[]{"S S","SSS","SSS",'S',TechMItem.itemArmorFrameSegment});
 		GameRegistry.addRecipe(new ItemStack(TechMItem.itemArmorFrameLegs), new Object[]{"SSS","S S","S S",'S',TechMItem.itemArmorFrameSegment});
 		GameRegistry.addRecipe(new ItemStack(TechMItem.itemArmorFrameBoots), new Object[]{"   ","S S","S S",'S',TechMItem.itemArmorFrameSegment});
+		GameRegistry.addRecipe(new ItemStack(TechMItem.itemEnrichedTristMesh), new Object[]{"LRL","RMR","LRL",'L',new ItemStack(Items.dye,1,4),'R', Items.redstone, 'M', TechMItem.itemTristMesh});
+		GameRegistry.addRecipe(new ItemStack(TechMItem.itemGoldenRope), new Object[]{"GTG","TST","GTG",'G',Items.gold_ingot, 'T', TechMItem.itemTrist, 'S', Items.string});
+		GameRegistry.addRecipe(new ItemStack(TechMItem.itemHood), new Object[]{"EEE","EGE","   ",'E',TechMItem.itemEnrichedTristMesh,'G', TechMItem.itemGoldenRope});
+		GameRegistry.addRecipe(new ItemStack(TechMItem.itemUpperRobe), new Object[]{"EGE","EEE","EEE",'E',TechMItem.itemEnrichedTristMesh,'G', TechMItem.itemGoldenRope});
+		GameRegistry.addRecipe(new ItemStack(TechMItem.itemLowerRobe), new Object[]{"EEE","EGE","E E",'E',TechMItem.itemEnrichedTristMesh,'G', TechMItem.itemGoldenRope});
+		GameRegistry.addRecipe(new ItemStack(TechMItem.itemSlippers), new Object[]{"   ","E E","EGE",'E',TechMItem.itemEnrichedTristMesh,'G', TechMItem.itemGoldenRope});
 	}
 	
 	@EventHandler

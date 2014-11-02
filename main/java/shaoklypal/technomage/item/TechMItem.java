@@ -15,6 +15,8 @@ public class TechMItem {
 	public static Item cropTristSeeds;
 	public static Item itemTrist;
 	public static Item itemTristMesh;
+	public static Item itemEnrichedTristMesh;
+	public static Item itemGoldenRope;
 
 	public static Item itemCompendium;
 	public static Item itemTungsten;
@@ -34,6 +36,10 @@ public class TechMItem {
 	public static Item itemArmorFrameChest;
 	public static Item itemArmorFrameLegs;
 	public static Item itemArmorFrameBoots;
+	public static Item itemHood;
+	public static Item itemUpperRobe;
+	public static Item itemLowerRobe;
+	public static Item itemSlippers;
 
 	/**
 	 * Init items
@@ -43,6 +49,8 @@ public class TechMItem {
 		cropTristSeeds = new ItemSeeds(TechMBlock.blockTrist, Blocks.farmland).setUnlocalizedName("TristSeeds").setTextureName("techm:tristseeds").setCreativeTab(TechnoMage.tabTechnoMage);
 		itemTrist = new ItemTrist().setUnlocalizedName("ItemTrist").setTextureName("techm:itemtrist").setCreativeTab(TechnoMage.tabTechnoMage);
 		itemTristMesh = new ItemTristMesh().setUnlocalizedName("ItemTristMesh").setTextureName("techm:itemtristmesh").setCreativeTab(TechnoMage.tabTechnoMage);
+		itemGoldenRope = new ItemGoldenRope().setUnlocalizedName("ItemGoldenRope").setTextureName("techm:itemgoldenrope").setCreativeTab(TechnoMage.tabTechnoMage);
+		itemEnrichedTristMesh = new ItemEnrichedTristMesh().setUnlocalizedName("ItemEnrichedTristMesh").setTextureName("techm:itemenrichedtristmesh").setCreativeTab(TechnoMage.tabTechnoMage);
 
 		//items
 		itemCompendium = new ItemCompendium().setUnlocalizedName("ItemCompendium").setTextureName("techm:itemcompendium").setCreativeTab(TechnoMage.tabTechnoMage);
@@ -66,6 +74,11 @@ public class TechMItem {
 		itemArmorFrameLegs = new ItemArmorFrameLegs().setUnlocalizedName("ItemArmorFrameLegs").setTextureName("techm:itemarmorframelegs").setCreativeTab(TechnoMage.tabTechnoMage);
 		itemArmorFrameBoots = new ItemArmorFrameBoots().setUnlocalizedName("ItemArmorFrameBoots").setTextureName("techm:itemarmorframeboots").setCreativeTab(TechnoMage.tabTechnoMage);
 
+		itemHood = new ItemHood().setUnlocalizedName("ItemHood").setTextureName("techm:itemhood").setCreativeTab(TechnoMage.tabTechnoMage);
+		itemUpperRobe = new ItemUpperRobe().setUnlocalizedName("ItemUpperRobe").setTextureName("techm:itemupperrobe").setCreativeTab(TechnoMage.tabTechnoMage);
+		itemLowerRobe = new ItemLowerRobe().setUnlocalizedName("ItemLowerRobe").setTextureName("techm:itemlowerrobe").setCreativeTab(TechnoMage.tabTechnoMage);
+		itemSlippers = new ItemSlippers().setUnlocalizedName("ItemSlippers").setTextureName("techm:itemslippers").setCreativeTab(TechnoMage.tabTechnoMage);
+
 		//register blocks
 		registerItem();
 	}
@@ -80,6 +93,8 @@ public class TechMItem {
 		GameRegistry.registerItem(itemTungsten, itemTungsten.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(itemTungstenAlloy, itemTungstenAlloy.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(itemArmorFrameSegment, itemArmorFrameSegment.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(itemEnrichedTristMesh, itemEnrichedTristMesh.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(itemGoldenRope, itemGoldenRope.getUnlocalizedName().substring(5));
 		//tools
 		GameRegistry.registerItem(tungstenPickaxe, tungstenPickaxe.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(tungstenAxe, tungstenAxe.getUnlocalizedName().substring(5));
@@ -95,6 +110,10 @@ public class TechMItem {
 		GameRegistry.registerItem(itemArmorFrameChest, itemArmorFrameChest.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(itemArmorFrameLegs, itemArmorFrameLegs.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(itemArmorFrameBoots, itemArmorFrameBoots.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(itemHood, itemHood.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(itemUpperRobe, itemUpperRobe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(itemLowerRobe, itemLowerRobe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(itemSlippers, itemSlippers.getUnlocalizedName().substring(5));
 		//crops
 		GameRegistry.registerItem(cropTristSeeds, cropTristSeeds.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(itemTrist, itemTrist.getUnlocalizedName().substring(5));	
