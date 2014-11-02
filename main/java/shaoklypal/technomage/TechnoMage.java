@@ -6,9 +6,12 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import shaoklypal.technomage.block.TechMBlock;
 import shaoklypal.technomage.item.TechMItem;
+import shaoklypal.technomage.proxy.ServerProxy;
 import shaoklypal.technomage.world.TechMOreGenerator;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -17,11 +20,19 @@ import cpw.mods.fml.common.registry.GameRegistry;
 @Mod(modid = "techm", name = "TechnoMage", version = "0.0.6.0")
 public class TechnoMage {
 	
+	@SidedProxy(clientSide ="shaoklypal.technomage.proxy.ClientProxy",serverSide = "shaoklypal.technomage.proxy.ServerProxy")
+	public static ServerProxy proxy;
+	
+	@Instance("techm")
+	public static TechnoMage modInstance;
+	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event){
 		//Item/Block init and reg
 		TechMBlock.init();
 		TechMItem.init();
+		
+		proxy.registerRenderThings();
 		
 		GameRegistry.addSmelting(TechMBlock.blockTungsten, new ItemStack(TechMItem.itemTungsten), 1.0F);
 		GameRegistry.registerWorldGenerator(new TechMOreGenerator(), 0);
@@ -30,6 +41,7 @@ public class TechnoMage {
 	@EventHandler
 	public void init(FMLInitializationEvent event){
 		//Proxy, TileEntity, entity, GUI and Packet Reg
+		proxy.registerNetworkStuff();
 		
 		//--------------------should prolly put this in its own class file as well-----------------------------------------------------
 		GameRegistry.addRecipe(new ItemStack(TechMItem.tungstenPickaxe), new Object[]{"TTT"," S "," S ",'T', TechMItem.itemTungsten, 'S', Items.stick});
