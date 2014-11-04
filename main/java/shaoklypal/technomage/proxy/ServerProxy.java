@@ -8,7 +8,7 @@ public class ServerProxy {
 	public void registerRenderThings(){
 		
 	}
-	public void registerNetworkStuff(){
-		NetworkRegistry.INSTANCE.registerGuiHandler(TechnoMage.modInstance, new TechMGuiHandler());
+	public static void registerNetworkStuff(){
+		//NetworkRegistry.INSTANCE.registerGuiHandler(TechnoMage.modInstance, new TechMGuiHandler());
 	}
 }

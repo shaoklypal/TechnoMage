@@ -5,6 +5,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import shaoklypal.technomage.block.TechMBlock;
+import shaoklypal.technomage.gui.TechMGuiHandler;
 import shaoklypal.technomage.item.TechMItem;
 import shaoklypal.technomage.proxy.ServerProxy;
 import shaoklypal.technomage.world.TechMOreGenerator;
@@ -15,6 +16,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = "techm", name = "TechnoMage", version = "0.0.6.0")
@@ -26,11 +28,15 @@ public class TechnoMage {
 	@Instance("techm")
 	public static TechnoMage modInstance;
 	
+	public static final int guiIDCompendium = 0;
+	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event){
 		//Item/Block init and reg
 		TechMBlock.init();
 		TechMItem.init();
+		
+		
 		
 		proxy.registerRenderThings();
 		
@@ -78,6 +84,8 @@ public class TechnoMage {
 		GameRegistry.addRecipe(new ItemStack(TechMItem.itemUpperRobe), new Object[]{"EGE","EEE","EEE",'E',TechMItem.itemEnrichedTristMesh,'G', TechMItem.itemGoldenRope});
 		GameRegistry.addRecipe(new ItemStack(TechMItem.itemLowerRobe), new Object[]{"EEE","EGE","E E",'E',TechMItem.itemEnrichedTristMesh,'G', TechMItem.itemGoldenRope});
 		GameRegistry.addRecipe(new ItemStack(TechMItem.itemSlippers), new Object[]{"   ","E E","EGE",'E',TechMItem.itemEnrichedTristMesh,'G', TechMItem.itemGoldenRope});
+		
+		NetworkRegistry.INSTANCE.registerGuiHandler(this, new TechMGuiHandler());
 	}
 	
 	@EventHandler
