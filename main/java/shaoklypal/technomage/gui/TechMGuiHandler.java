@@ -18,7 +18,10 @@ public class TechMGuiHandler implements IGuiHandler {
 		switch(ID){
 		case TechnoMage.guiIDCompendium:
 			return new ContainerCompendium(player.inventory, item);
-		}
+			//return null;
+			}
+			
+		
 		return null;
 	}
 
