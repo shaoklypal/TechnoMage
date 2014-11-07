@@ -3,9 +3,6 @@ package shaoklypal.technomage.item;
 
 import cpw.mods.fml.common.network.internal.FMLNetworkHandler;
 import shaoklypal.technomage.TechnoMage;
-import shaoklypal.technomage.gui.GuiCompendiumHome;
-import shaoklypal.technomage.gui.TechMGuiHandler;
-import shaoklypal.technomage.proxy.ServerProxy;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
