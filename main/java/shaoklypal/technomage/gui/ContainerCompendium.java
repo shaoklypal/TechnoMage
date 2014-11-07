@@ -16,6 +16,4 @@ public class ContainerCompendium extends Container {
 		// TODO Auto-generated method stub
 		return true;
 	}
-	
-
 }

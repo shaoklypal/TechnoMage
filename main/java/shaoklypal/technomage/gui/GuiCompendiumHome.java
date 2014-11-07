@@ -9,6 +9,9 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
 public class GuiCompendiumHome extends GuiScreen {
 	
 	public final ResourceLocation texture1 = new ResourceLocation("techm", "textures/gui/compendiumhome.png");
@@ -28,6 +31,7 @@ public class GuiCompendiumHome extends GuiScreen {
 	public int locX = 0;
 	public int locY = 0;
 	
+	@SideOnly(Side.CLIENT)
 	public GuiCompendiumHome(InventoryPlayer inventoryPlayer, Item ItemCompendium ) {
 		super();
 		this.buttonList.clear();
@@ -42,7 +46,7 @@ public class GuiCompendiumHome extends GuiScreen {
 		
 	}
 	
-	
+	@SideOnly(Side.CLIENT)
 	public void drawScreen(int par1, int par2, float par3){
 		drawDefaultBackground();
 		textureSizeX = 176;
@@ -80,8 +84,6 @@ public class GuiCompendiumHome extends GuiScreen {
 	}
 	
 	public void layout(){
-		//x = ((width - xSize) / 2) - 24;
-
 		switch(activeTab){
 		case 1:
 			GL11.glScalef(scaleX, scaleY, 1F);
