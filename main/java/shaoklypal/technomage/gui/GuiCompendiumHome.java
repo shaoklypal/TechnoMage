@@ -19,6 +19,8 @@ public class GuiCompendiumHome extends GuiScreen {
 	public final ResourceLocation btnHomeDown = new ResourceLocation("techm", "textures/gui/btnhomedown.png");
 	public final ResourceLocation btnStatsUp = new ResourceLocation("techm","textures/gui/btnstatsup.png");
 	public final ResourceLocation btnStatsDown = new ResourceLocation("techm","textures/gui/btnstatsdown.png");
+	public final ResourceLocation btnInfoUp = new ResourceLocation("techm","textures/gui/btninfoup.png");
+	public final ResourceLocation btnInfoDown = new ResourceLocation("techm","textures/gui/btninfodown.png");
 	
 	public int activeTab = 0;
 	public int y = 0;
@@ -54,6 +56,7 @@ public class GuiCompendiumHome extends GuiScreen {
 		locX = ((this.width / 2)- textureSizeX);
 		locY = (int) (this.height * 0.1);
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+		GL11.glScalef(1.0F, 1.0F, 1.0F);
 		Minecraft.getMinecraft().getTextureManager().bindTexture(texture1);
 		drawTexturedModalRect(locX, locY, 0, 0, textureSizeX, textureSizeY);
 		drawTexturedModalRect((locX + textureSizeX), locY, 0, 0, textureSizeX, textureSizeY);
@@ -64,6 +67,7 @@ public class GuiCompendiumHome extends GuiScreen {
 		//GL11.glScalef(scaleX, scaleY, 1F);
 		this.buttonList.add(new GuiButton(1,((x - 25)),(y),(25),(25),""));
 		this.buttonList.add(new GuiButton(2,((x - 25)),((y + 25)),(25),(25),""));
+		this.buttonList.add(new GuiButton(3,((x - 25)),((y + 50)),(25),(25),""));
 		if(activeTab == 0){
 			activeTab = 1;
 		}
@@ -80,6 +84,10 @@ public class GuiCompendiumHome extends GuiScreen {
 		case 2:
 			activeTab = 2;
 			layout();
+			break;
+		case 3:
+			activeTab = 3;
+			layout();
 		}
 	}
 	
@@ -91,6 +99,8 @@ public class GuiCompendiumHome extends GuiScreen {
 			drawTexturedModalRect(((x - 25)*scale),(y*scale),0,0,(25*scale),(25*scale));
 			Minecraft.getMinecraft().getTextureManager().bindTexture(btnStatsUp);
 			drawTexturedModalRect(((x - 25)*scale),((y+25)*scale),0,0,(25*scale),(25*scale));
+			Minecraft.getMinecraft().getTextureManager().bindTexture(btnInfoUp);
+			drawTexturedModalRect(((x - 25)*scale),((y+50)*scale),0,0,(25*scale),(25*scale));
 			break;
 		case 2:
 			GL11.glScalef(scaleX, scaleY, 1F);
@@ -98,6 +108,17 @@ public class GuiCompendiumHome extends GuiScreen {
 			drawTexturedModalRect(((x - 25)*scale),(y*scale),0,0,((25*scale)),((25*scale)));
 			Minecraft.getMinecraft().getTextureManager().bindTexture(btnStatsDown);
 			drawTexturedModalRect(((x - 25)*scale),((y+25)*scale),0,0,((25*scale)),((25*scale)));
+			Minecraft.getMinecraft().getTextureManager().bindTexture(btnInfoUp);
+			drawTexturedModalRect(((x - 25)*scale),((y+50)*scale),0,0,(25*scale),(25*scale));
+			break;
+		case 3:
+			GL11.glScalef(scaleX, scaleY, 1F);
+			Minecraft.getMinecraft().getTextureManager().bindTexture(btnHomeUp);
+			drawTexturedModalRect(((x - 25)*scale),(y*scale),0,0,((25*scale)),((25*scale)));
+			Minecraft.getMinecraft().getTextureManager().bindTexture(btnStatsUp);
+			drawTexturedModalRect(((x - 25)*scale),((y+25)*scale),0,0,((25*scale)),((25*scale)));
+			Minecraft.getMinecraft().getTextureManager().bindTexture(btnInfoDown);
+			drawTexturedModalRect(((x - 25)*scale),((y+50)*scale),0,0,(25*scale),(25*scale));
 			break;
 		}
 		
