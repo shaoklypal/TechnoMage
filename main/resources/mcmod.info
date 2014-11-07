@@ -5,7 +5,7 @@
   "description": "Mod that attempts to bring technology and magic together",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "https://github.com/shaoklypal/TechnoMage",
   "updateUrl": "",
   "authorList": ["Shaoklypal"],
   "credits": "The Forge and FML guys",
