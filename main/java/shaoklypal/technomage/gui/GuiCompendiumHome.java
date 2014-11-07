@@ -21,6 +21,7 @@ public class GuiCompendiumHome extends GuiScreen {
 	public final ResourceLocation btnStatsDown = new ResourceLocation("techm","textures/gui/btnstatsdown.png");
 	public final ResourceLocation btnInfoUp = new ResourceLocation("techm","textures/gui/btninfoup.png");
 	public final ResourceLocation btnInfoDown = new ResourceLocation("techm","textures/gui/btninfodown.png");
+	public final ResourceLocation titleTechnoMage = new ResourceLocation("techm","textures/gui/hometitle.png");
 	
 	public int activeTab = 0;
 	public int y = 0;
@@ -71,7 +72,9 @@ public class GuiCompendiumHome extends GuiScreen {
 		if(activeTab == 0){
 			activeTab = 1;
 		}
+		//homeContents();
 		layout();
+		//homeContents();
 		//super.drawScreen(par1, par2, par3);
 	}
 	
@@ -79,7 +82,9 @@ public class GuiCompendiumHome extends GuiScreen {
 		switch(guibutton.id){
 		case 1:
 			activeTab = 1;
+			//homeContents();
 			layout();
+			
 			break;
 		case 2:
 			activeTab = 2;
@@ -101,6 +106,8 @@ public class GuiCompendiumHome extends GuiScreen {
 			drawTexturedModalRect(((x - 25)*scale),((y+25)*scale),0,0,(25*scale),(25*scale));
 			Minecraft.getMinecraft().getTextureManager().bindTexture(btnInfoUp);
 			drawTexturedModalRect(((x - 25)*scale),((y+50)*scale),0,0,(25*scale),(25*scale));
+			GL11.glScalef((float)scale, (float)scale, 1F);
+			//homeContents();
 			break;
 		case 2:
 			GL11.glScalef(scaleX, scaleY, 1F);
@@ -110,6 +117,7 @@ public class GuiCompendiumHome extends GuiScreen {
 			drawTexturedModalRect(((x - 25)*scale),((y+25)*scale),0,0,((25*scale)),((25*scale)));
 			Minecraft.getMinecraft().getTextureManager().bindTexture(btnInfoUp);
 			drawTexturedModalRect(((x - 25)*scale),((y+50)*scale),0,0,(25*scale),(25*scale));
+			GL11.glScalef((float)scale, (float)scale, 1F);
 			break;
 		case 3:
 			GL11.glScalef(scaleX, scaleY, 1F);
@@ -119,8 +127,15 @@ public class GuiCompendiumHome extends GuiScreen {
 			drawTexturedModalRect(((x - 25)*scale),((y+25)*scale),0,0,((25*scale)),((25*scale)));
 			Minecraft.getMinecraft().getTextureManager().bindTexture(btnInfoDown);
 			drawTexturedModalRect(((x - 25)*scale),((y+50)*scale),0,0,(25*scale),(25*scale));
+			GL11.glScalef((float)scale, (float)scale, 1F);
 			break;
 		}
+		
+	}
+	public void homeContents(){
+		GL11.glScalef(1F, 1F, 1F);
+		Minecraft.getMinecraft().getTextureManager().bindTexture(titleTechnoMage);
+		drawTexturedModalRect(((int)((this.width)-800)/2), ((int)((this.height)-300)/2),0,0,(800),(300));
 		
 	}
 
