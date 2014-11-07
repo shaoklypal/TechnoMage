@@ -135,7 +135,7 @@ public class GuiCompendiumHome extends GuiScreen {
 	public void homeContents(){
 		GL11.glScalef(1F, 1F, 1F);
 		Minecraft.getMinecraft().getTextureManager().bindTexture(titleTechnoMage);
-		drawTexturedModalRect(((int)((this.width)-800)/2), ((int)((this.height)-300)/2),0,0,(800),(300));
+		drawTexturedModalRect(((int)((this.width)/2)-400), ((int)((this.height)/2)-150),0,0,(800),(300));
 		
 	}
 
