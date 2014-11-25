@@ -21,7 +21,8 @@ public class GuiCompendiumHome extends GuiScreen {
 	public final ResourceLocation btnStatsDown = new ResourceLocation("techm","textures/gui/btnstatsdown.png");
 	public final ResourceLocation btnInfoUp = new ResourceLocation("techm","textures/gui/btninfoup.png");
 	public final ResourceLocation btnInfoDown = new ResourceLocation("techm","textures/gui/btninfodown.png");
-	public final ResourceLocation titleTechnoMage = new ResourceLocation("techm","textures/gui/hometitle.png");
+	public final ResourceLocation titleTechnoMage1 = new ResourceLocation("techm","textures/gui/hometitle1.png");
+	public final ResourceLocation titleTechnoMage2 = new ResourceLocation("techm","textures/gui/hometitle2.png");
 	
 	public int activeTab = 0;
 	public int y = 0;
