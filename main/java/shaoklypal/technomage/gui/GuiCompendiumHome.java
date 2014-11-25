@@ -34,6 +34,8 @@ public class GuiCompendiumHome extends GuiScreen {
 	public int textureSizeY = 0;
 	public int locX = 0;
 	public int locY = 0;
+	public int screenX = this.width;
+	public int screenY = this.height;
 	
 	@SideOnly(Side.CLIENT)
 	public GuiCompendiumHome(InventoryPlayer inventoryPlayer, Item ItemCompendium ) {
@@ -100,6 +102,7 @@ public class GuiCompendiumHome extends GuiScreen {
 	public void layout(){
 		switch(activeTab){
 		case 1:
+			
 			GL11.glScalef(scaleX, scaleY, 1F);
 			Minecraft.getMinecraft().getTextureManager().bindTexture(btnHomeDown);
 			drawTexturedModalRect(((x - 25)*scale),(y*scale),0,0,(25*scale),(25*scale));
@@ -107,8 +110,14 @@ public class GuiCompendiumHome extends GuiScreen {
 			drawTexturedModalRect(((x - 25)*scale),((y+25)*scale),0,0,(25*scale),(25*scale));
 			Minecraft.getMinecraft().getTextureManager().bindTexture(btnInfoUp);
 			drawTexturedModalRect(((x - 25)*scale),((y+50)*scale),0,0,(25*scale),(25*scale));
-			GL11.glScalef((float)scale, (float)scale, 1F);
+			GL11.glScalef((-1 * scaleX), (-1 * scaleY), 1F);
 			//homeContents();
+			//GL11.glScalef(10F, 10F, 1F);
+			Minecraft.getMinecraft().getTextureManager().bindTexture(titleTechnoMage1);
+			drawTexturedModalRect(((Minecraft.getMinecraft().displayWidth/2)-246), ((Minecraft.getMinecraft().displayHeight/2)-87),0,0,247,174);
+			Minecraft.getMinecraft().getTextureManager().bindTexture(titleTechnoMage2);
+			drawTexturedModalRect(((Minecraft.getMinecraft().displayWidth/2)+1), ((Minecraft.getMinecraft().displayHeight/2)-87),0,0,245,174);
+			//GL11.glScalef(-1F, -1F, -1F);
 			break;
 		case 2:
 			GL11.glScalef(scaleX, scaleY, 1F);
@@ -118,7 +127,7 @@ public class GuiCompendiumHome extends GuiScreen {
 			drawTexturedModalRect(((x - 25)*scale),((y+25)*scale),0,0,((25*scale)),((25*scale)));
 			Minecraft.getMinecraft().getTextureManager().bindTexture(btnInfoUp);
 			drawTexturedModalRect(((x - 25)*scale),((y+50)*scale),0,0,(25*scale),(25*scale));
-			GL11.glScalef((float)scale, (float)scale, 1F);
+			//GL11.glScalef((-1 * scaleX), (-1 * scaleY), 1F);
 			break;
 		case 3:
 			GL11.glScalef(scaleX, scaleY, 1F);
@@ -128,15 +137,15 @@ public class GuiCompendiumHome extends GuiScreen {
 			drawTexturedModalRect(((x - 25)*scale),((y+25)*scale),0,0,((25*scale)),((25*scale)));
 			Minecraft.getMinecraft().getTextureManager().bindTexture(btnInfoDown);
 			drawTexturedModalRect(((x - 25)*scale),((y+50)*scale),0,0,(25*scale),(25*scale));
-			GL11.glScalef((float)scale, (float)scale, 1F);
+			//GL11.glScalef((-1 * scaleX), (-1 * scaleY), 1F);
 			break;
 		}
 		
 	}
 	public void homeContents(){
 		GL11.glScalef(1F, 1F, 1F);
-		Minecraft.getMinecraft().getTextureManager().bindTexture(titleTechnoMage);
-		drawTexturedModalRect(((int)((this.width)/2)-400), ((int)((this.height)/2)-150),0,0,(800),(300));
+		Minecraft.getMinecraft().getTextureManager().bindTexture(titleTechnoMage1);
+		drawTexturedModalRect(((int)((this.width)/2)), ((int)((this.height)/2)),0,0,(800),(300));
 		
 	}
 
